@@ -1,0 +1,58 @@
+@import "src/assets/styles/styles.scss";
+
+.clasificacion {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(46, 46, 46);
+  @include title();
+  padding: 20px;
+  overflow-x: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  h1 {
+    color: white;
+  }
+  table {
+    width: 80vw;
+    height: 70vh;
+    border: white 2px solid;
+  }
+
+  #mundialito {
+    font-family: $titleFont;
+    border-collapse: collapse;
+  }
+
+  #mundialito td,
+  #mundialito th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  #mundialito tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  #mundialito tr:nth-child(odd) {
+    background-color: #c5c5c5;
+  }
+
+  #mundialito tr:hover {
+    background-color: #ddd;
+  }
+
+  #mundialito img {
+    width: 60px;
+    height: 60px;
+  }
+  #mundialito th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: $mainBackgroundColor;
+    color: white;
+  }
+}
