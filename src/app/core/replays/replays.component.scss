@@ -31,12 +31,25 @@
       text-align: center;
     }
     h3 a {
+      word-break: break-all;
       color: rgb(59, 59, 255);
     }
 
     img {
       width: 80%;
       border-radius: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .replays {
+    .replay {
+      width: 90%;
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
     }
   }
 }
