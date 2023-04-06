@@ -1,0 +1,42 @@
+@import "src/assets/styles/styles.scss";
+
+.replays {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  background-color: rgb(46, 46, 46);
+  @include title();
+  padding: 20px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  h1,
+  h3 {
+    color: white;
+  }
+
+  .replay {
+    width: 50vw;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    background-color: rgb(83, 83, 83);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h3,
+    a {
+      text-align: center;
+    }
+    h3 a {
+      color: rgb(59, 59, 255);
+    }
+
+    img {
+      width: 80%;
+      border-radius: 10px;
+    }
+  }
+}

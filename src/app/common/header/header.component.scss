@@ -45,11 +45,23 @@ header {
 
 @media only screen and (max-width: 570px) {
   header {
+    .logo {
+      img {
+        width: auto;
+        height: 30px;
+      }
+      h1 {
+        cursor: pointer;
+        color: white;
+        font-size: 3.5vw;
+        transition: all ease 200ms;
+      }
+    }
     .text {
       h1 {
         cursor: pointer;
         color: white;
-        font-size: 3vw;
+        font-size: 2.5vw;
         transition: all ease 200ms;
       }
     }
