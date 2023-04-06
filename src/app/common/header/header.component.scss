@@ -42,3 +42,16 @@ header {
     padding: 10%;
   }
 }
+
+@media only screen and (max-width: 570px) {
+  header {
+    .text {
+      h1 {
+        cursor: pointer;
+        color: white;
+        font-size: 3vw;
+        transition: all ease 200ms;
+      }
+    }
+  }
+}

@@ -15,44 +15,87 @@
   h1 {
     color: white;
   }
-  table {
-    width: 80vw;
-    height: 70vh;
-    border: white 2px solid;
-  }
+  .table-container {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    overflow-y: scroll;
+    table {
+      width: 80vw;
+      border-collapse: collapse;
 
-  #mundialito {
-    font-family: $titleFont;
-    border-collapse: collapse;
-  }
+      height: 200vh;
+      border: none;
+    }
 
-  #mundialito td,
-  #mundialito th {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-  }
+    #mundialito {
+      font-family: $titleFont;
+      border-collapse: collapse;
+    }
 
-  #mundialito tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  #mundialito tr:nth-child(odd) {
-    background-color: #c5c5c5;
-  }
+    #mundialito td,
+    #mundialito th {
+      padding: 8px;
+      text-align: center;
+    }
 
-  #mundialito tr:hover {
-    background-color: #aea9bb;
-  }
+    #mundialito tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    #mundialito tr:nth-child(odd) {
+      background-color: #c5c5c5;
+    }
 
-  #mundialito img {
-    width: 60px;
-    height: 60px;
+    #mundialito tr:hover {
+      background-color: #aea9bb;
+    }
+
+    #mundialito img {
+      width: 60px;
+      height: 60px;
+    }
+    #mundialito th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: center;
+      background-color: $mainBackgroundColor;
+      color: white;
+    }
   }
-  #mundialito th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: $mainBackgroundColor;
-    color: white;
+}
+
+@media only screen and (max-width: 570px) {
+  .clasificacion {
+    .table-container {
+      table {
+        thead {
+          display: none;
+        }
+        tbody {
+          display: flex;
+          flex-direction: column;
+          tr {
+            display: flex;
+            flex-direction: column;
+            td {
+              text-align: left !important;
+              display: flex;
+              align-self: flex-start;
+              justify-content: center;
+            }
+            td[data-title="Roles"] {
+              p {
+                margin: 10px;
+              }
+            }
+            td::before {
+              content: attr(data-title) " :";
+              font-weight: bold;
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
   }
 }
