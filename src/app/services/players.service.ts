@@ -11,6 +11,6 @@ export class PlayersService {
   constructor(private http: HttpClient) {}
 
   getAllPlayers(): Observable<any> {
-    return this.http.get(this.url.toString());
+    return this.http.get(this.url.toString() + '/rank');
   }
 }

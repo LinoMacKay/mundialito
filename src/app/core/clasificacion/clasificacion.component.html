@@ -14,7 +14,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let player of players; let i = index">
-          <td data-title="Rank">{{ i + 1 }}</td>
+          <td data-title="Rank">{{ player.rank }}</td>
           <td data-title="Player">{{ player.name }}</td>
           <td data-title="Wins">{{ player.wins }}</td>
           <td data-title="Loses">{{ player.loses }}</td>
