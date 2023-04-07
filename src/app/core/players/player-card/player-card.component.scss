@@ -3,7 +3,7 @@
 .player-card {
   width: 250px;
   height: 300px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(65, 65, 65);
   border-radius: 10px;
   border: 2px solid white;
   position: relative;
@@ -12,6 +12,7 @@
   justify-content: flex-start;
   align-items: center;
   @include title();
+  @include paragraph();
   img {
     position: absolute;
     top: -50px;
@@ -22,6 +23,7 @@
   .player-info {
     display: flex;
     align-items: center;
+    word-break: break-all;
     justify-content: flex-start;
     flex-direction: column;
     margin-top: 40px;
@@ -30,5 +32,14 @@
     h3 {
       font-size: 1.3rem;
     }
+    p {
+      font-size: 1rem;
+    }
   }
+  cursor: pointer;
+  transition: ease all 250ms;
+}
+
+.player-card:hover {
+  transform: scale(1.05);
 }

@@ -1,0 +1,27 @@
+@import "src/assets/styles/styles.scss";
+
+.dashboard-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(46, 46, 46);
+  padding: 20px;
+  overflow: hidden;
+  @include title();
+  h1 {
+    color: white;
+  }
+  .dashboard-grid {
+    width: inherit;
+    height: inherit;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-gap: 20px;
+    grid-auto-rows: 350px;
+    justify-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .dashboard-container {
+  }
+}

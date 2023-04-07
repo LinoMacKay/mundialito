@@ -3,11 +3,11 @@ import { Player } from 'src/app/model/player';
 import { PlayersService } from 'src/app/services/players.service';
 
 @Component({
-  selector: 'app-clasificacion',
-  templateUrl: './clasificacion.component.html',
-  styleUrls: ['./clasificacion.component.scss'],
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss'],
 })
-export class ClasificacionComponent {
+export class DashboardComponent {
   players: Player[] = [];
   constructor(private playersService: PlayersService) {}
 

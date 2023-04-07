@@ -1,0 +1,9 @@
+<div class="dashboard-container">
+  <h1>Dashboard</h1>
+  <div class="dashboard-grid">
+    <app-player-card
+      *ngFor="let player of players"
+      [player]="player"
+    ></app-player-card>
+  </div>
+</div>
