@@ -16,7 +16,8 @@ export class PlayerCardComponent {
     6,
     7,
     [''],
-    'testingemail@test.com'
+    'testingemail@test.com',
+    ''
   );
   @Output() resultEmitter = new EventEmitter();
 
@@ -35,7 +36,7 @@ export class PlayerCardComponent {
           width: '50vw',
           height: '80vh',
           data: {
-            personToEdit: this.player,
+            player: this.player,
           },
         })
         .afterClosed()

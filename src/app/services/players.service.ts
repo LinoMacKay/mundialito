@@ -13,4 +13,7 @@ export class PlayersService {
   getAllPlayers(): Observable<any> {
     return this.http.get(this.url.toString() + '/rank');
   }
+  updateCandidate(body: any, id: String) {
+    return this.http.put(`${this.url}/${id}`, body);
+  }
 }

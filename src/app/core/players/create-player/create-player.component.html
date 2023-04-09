@@ -1,1 +1,61 @@
-<p>create-player works!</p>
+<div class="create-player-form">
+  <h1>{{ player.name }}</h1>
+  <form [formGroup]="playerForm">
+    <div class="form-controller">
+      <label>Rank</label>
+      <div class="form-container">
+        <input
+          formControlName="rank"
+          placeholder="Ingrese el rank"
+          type="number"
+        />
+      </div>
+      <p
+        *ngIf="playerForm.get('rank')?.errors && playerForm.get('rank')?.dirty"
+        class="error"
+      >
+        Es necesario un rank
+      </p>
+    </div>
+
+    <div class="form-controller">
+      <label>Wins</label>
+      <div class="form-container">
+        <input
+          formControlName="wins"
+          placeholder="Ingrese la cantidad de wins"
+          type="number"
+        />
+      </div>
+      <p
+        *ngIf="playerForm.get('wins')?.errors && playerForm.get('wins')?.dirty"
+        class="error"
+      >
+        Es necesario las wins
+      </p>
+    </div>
+
+    <div class="form-controller">
+      <label>Loses</label>
+      <div class="form-container">
+        <input
+          formControlName="loses"
+          placeholder="Ingrese la cantidad de loses"
+          type="number"
+        />
+      </div>
+      <p
+        *ngIf="
+          playerForm.get('loses')?.errors && playerForm.get('loses')?.dirty
+        "
+        class="error"
+      >
+        Es necesario las loses
+      </p>
+    </div>
+
+    <button (click)="submitForm()">
+      {{ player.name.length > 0 ? " Editar Candidato" : "Registrar Candidato" }}
+    </button>
+  </form>
+</div>

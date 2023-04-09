@@ -1,0 +1,19 @@
+@import "src/assets/styles/styles.scss";
+
+.create-player-form {
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  @include button();
+
+  @include title();
+  @include form-controller(
+    (
+      Properties: (
+        border-color: rgb(195, 21, 21),
+        height: 35px,
+        radius: 40px,
+      ),
+    )
+  );
+}

@@ -9,6 +9,7 @@ import { ReplaysComponent } from './replays/replays.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CreatePlayerComponent } from './players/create-player/create-player.component';
 
 @NgModule({
@@ -22,6 +23,7 @@ import { CreatePlayerComponent } from './players/create-player/create-player.com
   ],
   exports: [PlayerCardComponent, PlayersComponent],
   imports: [
+    MatSnackBarModule,
     CommonModule,
     HttpClientModule,
     RouterModule,
