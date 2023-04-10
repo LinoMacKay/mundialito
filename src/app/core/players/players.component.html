@@ -1,7 +1,9 @@
-<div class="home">
-  <app-player-card></app-player-card>
-  <app-player-card></app-player-card>
-  <app-player-card></app-player-card>
-  <app-player-card></app-player-card>
-  <app-player-card></app-player-card>
+<div class="players-container">
+  <h1>Jugadores Inscritos</h1>
+  <div class="players-grid">
+    <app-player-card
+      *ngFor="let player of players"
+      [player]="player"
+    ></app-player-card>
+  </div>
 </div>

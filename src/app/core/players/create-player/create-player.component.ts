@@ -11,13 +11,14 @@ import { PlayersService } from 'src/app/services/players.service';
   styleUrls: ['./create-player.component.scss'],
 })
 export class CreatePlayerComponent {
-  player: Player = new Player(0, '', 0, 0, [], '', '');
+  player: Player = new Player(0, '', 0, 0, [], '', '', '');
   isNew = true;
 
   playerForm = new FormGroup({
     rank: new FormControl(0, Validators.required),
     wins: new FormControl(0, Validators.required),
     loses: new FormControl(0, Validators.required),
+    imageUrl: new FormControl(' ', Validators.required),
   });
   constructor(
     public dialogRef: MatDialogRef<CreatePlayerComponent>,
@@ -42,6 +43,7 @@ export class CreatePlayerComponent {
       rank: this.player.rank,
       wins: this.player.wins,
       loses: this.player.loses,
+      imageUrl: this.player.imageUrl.toString(),
     });
   }
   submitForm() {
@@ -50,6 +52,7 @@ export class CreatePlayerComponent {
         rank: this.playerForm.get('rank')?.value,
         wins: this.playerForm.get('wins')?.value,
         loses: this.playerForm.get('loses')?.value,
+        imageUrl: this.playerForm.get('imageUrl')?.value,
         name: this.player.name,
         roles: this.player.roles,
         medal: this.player.medal,

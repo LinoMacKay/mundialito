@@ -9,7 +9,7 @@ import { DashboardComponent } from './core/dashboard/dashboard.component';
 const routes: Routes = [
   { path: '', redirectTo: '/clasificacion', pathMatch: 'full' },
   // { path: 'home', component: HomeComponent },
-  // { path: 'players', component: PlayersComponent },
+  { path: 'players', component: PlayersComponent },
   { path: 'clasificacion', component: ClasificacionComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'replays', component: ReplaysComponent },

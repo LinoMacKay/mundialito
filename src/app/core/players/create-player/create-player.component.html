@@ -54,6 +54,26 @@
       </p>
     </div>
 
+    <div class="form-controller">
+      <label>Foto</label>
+      <div class="form-container">
+        <input
+          formControlName="imageUrl"
+          placeholder="Ingrese el link de la foto"
+          type="text"
+        />
+      </div>
+      <p
+        *ngIf="
+          playerForm.get('imageUrl')?.errors &&
+          playerForm.get('imageUrl')?.dirty
+        "
+        class="error"
+      >
+        Es necesario el link de la foto"
+      </p>
+    </div>
+
     <button (click)="submitForm()">
       {{ player.name.length > 0 ? " Editar Candidato" : "Registrar Candidato" }}
     </button>

@@ -17,6 +17,7 @@ export class PlayerCardComponent {
     7,
     [''],
     'testingemail@test.com',
+    '',
     ''
   );
   @Output() resultEmitter = new EventEmitter();
@@ -25,6 +26,7 @@ export class PlayerCardComponent {
   ngOnInit(): void {
     console.log(this.router.url);
     this.initialize();
+    this.player.imageUrl.length;
   }
 
   initialize() {}

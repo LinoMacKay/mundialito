@@ -1,15 +1,28 @@
-.home {
-  width: 100vw;
-  height: calc(100vh - 80px);
-  background-color: rgb(46, 46, 46);
+@import "src/assets/styles/styles.scss";
 
-  display: grid;
-  padding: 60px;
-  grid-template-columns: repeat(auto-fill, 250px);
-  grid-gap: 20px;
-  grid-auto-rows: 350px;
+.players-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(46, 46, 46);
+  padding: 20px 20px 40px 20px;
   overflow: hidden;
-  overflow-y: scroll;
-  justify-items: center;
-  justify-content: center;
+  @include title();
+  h1 {
+    color: white;
+  }
+  .players-grid {
+    margin: 50px 0 0 0;
+    width: inherit;
+    height: inherit;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-gap: 20px;
+    grid-auto-rows: 350px;
+    justify-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .players-container {
+  }
 }

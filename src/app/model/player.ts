@@ -4,6 +4,7 @@ export class Player {
   _id: String;
   wins: number;
   loses: number;
+  imageUrl: String;
   roles: Array<String>;
   medal: String;
 
@@ -14,11 +15,13 @@ export class Player {
     loses: number,
     roles: Array<String>,
     medal: String,
+    imageUrl: String,
     _id: String
   ) {
     this.rank = rank;
     this.name = name;
     this._id = _id;
+    this.imageUrl = imageUrl;
     this.loses = loses;
     this.wins = wins;
     this.roles = roles;
