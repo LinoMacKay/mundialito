@@ -1,31 +1,7 @@
 <div class="replays">
   <h1>Replays</h1>
-
-  <div class="replay mat-elevation-z5">
-    <h3>Mundialito Segunda Fecha</h3>
-    <h3>
-      Link:
-      <a href="https://www.facebook.com/100063980687236/videos/1214261065875032"
-        >https://www.facebook.com/100063980687236/videos/1214261065875032</a
-      >
-    </h3>
-    <img
-      src="https://media.discordapp.net/attachments/650908935544635403/1094771541167841341/Segunda_Fecha.png?width=1145&height=671"
-      alt="Fecha 1"
-    />
-  </div>
-
-  <div class="replay mat-elevation-z5">
-    <h3>Mundialito Primera Fecha Oficial</h3>
-    <h3>
-      Link:
-      <a href="https://www.facebook.com/100063980687236/videos/1313035982582615"
-        >https://www.facebook.com/100063980687236/videos/1313035982582615</a
-      >
-    </h3>
-    <img
-      src="https://media.discordapp.net/attachments/650908935544635403/1093461084674998302/image.png?width=1234&height=671"
-      alt="Fecha 1"
-    />
-  </div>
+  <app-replay-card
+    *ngFor="let replay of replays"
+    [replay]="replay"
+  ></app-replay-card>
 </div>
