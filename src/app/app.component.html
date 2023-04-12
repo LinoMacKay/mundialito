@@ -1,4 +1,22 @@
 <div class="main-body">
-  <app-header></app-header>
-  <router-outlet></router-outlet>
+  <mat-drawer-container class="example-container" [hasBackdrop]="true">
+    <app-header (resultEmitter)="drawer.toggle()"></app-header>
+
+    <mat-drawer #drawer class="sidenav" [mode]="'over'">
+      <div class="option" routerLink="/clasificacion" (click)="drawer.toggle()">
+        <h1>Clasificación</h1>
+      </div>
+      <div class="option" routerLink="/players" (click)="drawer.toggle()">
+        <h1>Players</h1>
+      </div>
+      <div class="option" routerLink="/replays" (click)="drawer.toggle()">
+        <h1>Replays</h1>
+      </div>
+      <div class="option" routerLink="/highlights" (click)="drawer.toggle()">
+        <h1>HighLights</h1>
+      </div>
+    </mat-drawer>
+
+    <router-outlet></router-outlet
+  ></mat-drawer-container>
 </div>

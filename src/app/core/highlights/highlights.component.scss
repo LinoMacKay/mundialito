@@ -1,0 +1,31 @@
+@import "src/assets/styles/styles.scss";
+
+.highlights {
+  width: 100vw;
+  height: auto;
+  background-color: rgb(46, 46, 46);
+  @include title();
+  padding: 20px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  h1,
+  h3 {
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .highlights {
+    .replay {
+      width: 90%;
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}

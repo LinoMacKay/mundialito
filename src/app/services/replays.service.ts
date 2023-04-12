@@ -10,8 +10,8 @@ export class ReplaysService {
   url = `${environment.hostUrl}/replays`;
   constructor(private http: HttpClient) {}
 
-  getAllReplays(): Observable<any> {
-    return this.http.get(this.url.toString());
+  getAllReplays(type: Number): Observable<any> {
+    return this.http.get(this.url.toString() + '/' + type);
   }
   // updateCandidate(body: any, id: String) {
   //   return this.http.put(`${this.url}/${id}`, body);

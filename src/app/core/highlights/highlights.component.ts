@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
+import { Player } from 'src/app/model/player';
 import { Replay } from 'src/app/model/replay';
+import { PlayersService } from 'src/app/services/players.service';
 import { ReplaysService } from 'src/app/services/replays.service';
 
 @Component({
-  selector: 'app-replays',
-  templateUrl: './replays.component.html',
-  styleUrls: ['./replays.component.scss'],
+  selector: 'app-highlights',
+  templateUrl: './highlights.component.html',
+  styleUrls: ['./highlights.component.scss'],
 })
-export class ReplaysComponent {
+export class HighlightsComponent {
   replays: Replay[] = [];
   constructor(private replaysService: ReplaysService) {}
   ngOnInit(): void {
@@ -15,7 +17,7 @@ export class ReplaysComponent {
   }
 
   initialize() {
-    this.replaysService.getAllReplays(1).subscribe((data: any) => {
+    this.replaysService.getAllReplays(2).subscribe((data: any) => {
       this.replays = data;
     });
   }

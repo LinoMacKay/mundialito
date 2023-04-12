@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CreatePlayerComponent } from './players/create-player/create-player.component';
 import { ReplayCardComponent } from './replays/replay-card/replay-card.component';
+import { HighlightsComponent } from './highlights/highlights.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ReplayCardComponent } from './replays/replay-card/replay-card.component
     DashboardComponent,
     CreatePlayerComponent,
     ReplayCardComponent,
+    HighlightsComponent,
   ],
   exports: [PlayerCardComponent, PlayersComponent],
   imports: [
